@@ -6,7 +6,7 @@ media_folder: static/images
 public_folder: /images
 
 collections:
-- name: "pages"
+  - name: "pages"
     label: "Pages"
     files:
       - file: "src/content/index.md"
