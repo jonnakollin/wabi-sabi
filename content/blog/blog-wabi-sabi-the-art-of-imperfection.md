@@ -1,6 +1,6 @@
 ---
 date: '2019-02-24'
-title: 'Wabi-Sabi: The art of imperfection'
+title: Wabi-Sabi
 ---
 Imperfection is the basic principle of Wabi-Sabi, the Japanese philosophy of accepting your imperfections and making the most of life.
 
