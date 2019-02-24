@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nuxtdown-body class="body" :body="page.body"/>
+    <nuxtdown-body class="body" :body="posts.body"/>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   asyncData: async ({ app, route, payload }) => {
     return {
-      post: (await app.$content("/posts").get(route.path)) || payload
+      posts: (await app.$content("/posts").get(route.path)) || payload
     };
   }
 };

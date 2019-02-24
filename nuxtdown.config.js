@@ -22,7 +22,7 @@ module.exports = {
       {
         page: '/blog/_post',
         permalink: '/blog/:slug',
-        isPost: true
+        isPost: false
       }
     ],
   ]
