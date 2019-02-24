@@ -6,22 +6,21 @@ media_folder: static/images
 public_folder: /images
 
 collections:
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "src/content/index.md"
-        label: "Landing Page"
-        name: "Index Page"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/content/about/index.md"
-        label: "About"
-        name: "about"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Pages"
+    name: "pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    slug: "blog/{{slug}}"
+    create: true
+    fields:
+      - { label: "Date", name: "date", widget: date }
+      - { label: "Title", name: "title", widget: "string"  }
+      - { label: "Body", name: "body", widget: "markdown" }
