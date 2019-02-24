@@ -30,6 +30,6 @@ export default {
   height: 70px;
   width: 100%;
   border-bottom: 1px solid @veryLightGrey;
-  padding: 20px 40px;
+  padding: 20px 20px;
 }
 </style>
