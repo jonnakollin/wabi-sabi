@@ -3,16 +3,19 @@
     <NuxtLink to="/">
       <h1 class="title">wabi-sabi</h1>
     </NuxtLink>
-    <Navigation/>
+    <MenuMobile class="menu-mobile"/>
+    <MenuDesktop class="menu-desktop"/>
   </header>
 </template>
 
 <script>
-import Navigation from "~/components/Navigation.vue";
+import MenuDesktop from "~/components/MenuDesktop.vue";
+import MenuMobile from "~/components/MenuMobile.vue";
 
 export default {
   components: {
-    Navigation
+    MenuDesktop,
+    MenuMobile
   }
 };
 </script>
@@ -31,5 +34,19 @@ export default {
   width: 100%;
   border-bottom: 1px solid @veryLightGrey;
   padding: 20px 20px;
+}
+
+.menu-mobile {
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-desktop {
+  display: none;
+
+  @media only screen and (min-width: 768px) {
+    display: block;
+  }
 }
 </style>
