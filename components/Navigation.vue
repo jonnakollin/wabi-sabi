@@ -50,7 +50,7 @@ export default {
   padding: 10px 0;
   font-size: 18px;
   color: @black;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1024px) {
     margin-right: 20px;
     padding: 0;
 
@@ -62,7 +62,7 @@ export default {
 
 .primary-menu-desktop {
   display: none;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1024px) {
     display: block;
   }
 }

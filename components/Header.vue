@@ -37,7 +37,7 @@ export default {
 }
 
 .menu-mobile {
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1024px) {
     display: none;
   }
 }
@@ -45,7 +45,7 @@ export default {
 .menu-desktop {
   display: none;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1024px) {
     display: block;
   }
 }
