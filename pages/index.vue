@@ -2,27 +2,34 @@
   <div>
     <Header/>
     <section class="container">
-      <div>
-        <h2 class="subtitle">My lovely Nuxt.js project</h2>
-        <div class="links">
-          <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-          <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
-        </div>
+      <div v-for="post in posts" v-bind:key="post.slug">
+        <PostTeaser
+          class="post-teaser"
+          v-bind:title="post.title"
+          :date="post.date"
+          :body="post.body"
+          :image="post.image"
+        />
       </div>
     </section>
   </div>
 </template>
 
-<style>
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+<script>
+import PostTeaser from "~/components/PostTeaser";
+export default {
+  components: {
+    PostTeaser
+  },
+  asyncData: async ({ app, route, payload }) => ({
+    posts: (await app.$content("/posts").get(route.path)) || payload
+  })
+};
+</script>
 
-.links {
-  padding-top: 15px;
+<style lang="less" scoped>
+.post-teaser {
+  margin-bottom: 40px;
 }
 </style>
+

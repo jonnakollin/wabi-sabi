@@ -20,7 +20,7 @@ module.exports = {
     [
       'posts',
       {
-        page: '/blog/_post',
+        page: '/blog/_posts',
         permalink: '/blog/:slug',
         isPost: false
       }

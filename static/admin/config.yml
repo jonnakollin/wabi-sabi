@@ -6,7 +6,7 @@ media_folder: static/images
 public_folder: /images
 
 collections:
-  - label: "Pages"
+  - label: "Page"
     name: "pages"
     folder: "content/pages"
     create: true
@@ -20,17 +20,18 @@ collections:
   - label: "Post"
     name: "posts"
     folder: "content/posts"
-    slug: "blog/{{slug}}"
+    slug: "{{slug}}"
     create: true
     fields:
       - {
           label: 'Publish Date',
           name: 'date',
           widget: 'date',
-          dateFormat: 'YYYY-MM-DD',
-          format: 'YYYY-MM-DD',
+          dateFormat: 'MMMM DD YYYY',
+          format: 'MMMM DD YYYY',
         }
-      - { label: "Title", name: "title", widget: "string"  }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image", required: false}
       - { label: "Body", name: "body", widget: "markdown" }
     meta:
       - { label: 'SEO Description', name: 'description', widget: 'text' }

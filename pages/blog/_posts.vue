@@ -1,6 +1,9 @@
 <template>
   <div>
+    <h1 class="title">{{posts.title}}</h1>
+    <p>{{posts.date}}</p>
     <nuxtdown-body class="body" :body="posts.body"/>
+    <img class="image" :src="posts.image">
   </div>
 </template>
 
@@ -22,5 +25,9 @@ export default {
 .title {
   margin-bottom: 10px;
   text-align: center;
+}
+
+.body {
+  max-width: 750px;
 }
 </style>
