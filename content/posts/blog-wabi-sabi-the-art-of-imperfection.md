@@ -5,7 +5,7 @@ image: /images/img_4139.jpg
 ---
 In Zen philosophy, there are seven aesthetic principles in achieving wabi-sabi:
 
-Kanso — simplicity
+Kanso — simplicity 
 
 Fukinsei — asymmetry or irregularity
 
