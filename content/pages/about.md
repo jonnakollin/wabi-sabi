@@ -1,5 +1,5 @@
 ---
 title: About
-image: /images/img_4132.jpg
+image: ''
 ---
 This is a page about nothing
