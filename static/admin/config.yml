@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
+site_url: https://wabi-sabi.netlify.com/
+
 media_folder: static/images
 public_folder: /images
 
@@ -16,11 +18,11 @@ collections:
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
     meta:
-      - { label: 'SEO Description', name: 'description', widget: 'text' }
+      - { label: 'SEO Description', name: 'seo', widget: 'text' }
   - label: "Post"
     name: "posts"
     folder: "content/posts"
-    slug: "{{slug}}"
+    slug: "{{fields.slug}}"
     create: true
     fields:
       - {
@@ -31,7 +33,17 @@ collections:
           format: 'MMMM DD YYYY',
         }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image", required: false}
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false}
+      - { label: "Category", name: "category", widget: "relation", collection: "categories", searchFields: ["title"], valueField: "title", displayFields: ["title"], required: false}
+      - { label: "Description", name: "description", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
     meta:
-      - { label: 'SEO Description', name: 'description', widget: 'text' }
+      - { label: 'SEO Description', name: 'seo', widget: 'text' }
+  - label: 'Categories'
+    name: 'categories'
+    folder: "content/categories" 
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: Title, name: title, widget: string} 
