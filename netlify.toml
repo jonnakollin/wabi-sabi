@@ -14,5 +14,5 @@
 # The following redirect is intended for use with most SPA's that handles routing internally.
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/200.html"
   status = 200

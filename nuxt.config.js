@@ -58,6 +58,12 @@ module.exports = {
     '@nuxtjs/style-resources',
   ],
 
+  generate: {
+    routes: [
+      '/about'
+    ]
+  },
+
   env: {
     BASE_URL: process.env.BASE_URL || 'http://localhost:3000'
   },
