@@ -1,12 +1,12 @@
 <template>
   <nav class="menu-mobile">
-    <button v-on:click="toggleMenu">
-      <img class="icon" src="../assets/icons/menu.svg">
+    <button @click="toggleMenu">
+      <img class="icon" src="~/assets/icons/menu.svg">
     </button>
     <div v-if="expanded">
-      <div class="menu" v-bind:class="{expanded: expanded}">
-        <button v-on:click="toggleMenu">
-          <img class="icon cross-icon" src="../assets/icons/close.svg">
+      <div class="menu" :class="{expanded: expanded}">
+        <button @click="toggleMenu">
+          <img class="icon cross-icon" src="~/assets/icons/close.svg">
         </button>
         <div class="menu-container">
           <NuxtLink
@@ -15,6 +15,7 @@
             :key="link.id"
             :to="link.path"
             class="menu-item"
+            @click.native="toggleMenu"
           >{{link.name}}</NuxtLink>
           <a
             v-for="link in links"
