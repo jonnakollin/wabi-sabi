@@ -1,6 +1,7 @@
 ---
 date: March 01 2019
-title: test2
+title: Netlify + Vue
+slug: testar
 image: >-
   https://raw.githubusercontent.com/jonnakollin/wabi-sabi/master/static/images/img_4139.jpg
 category: Web development
