@@ -1,6 +1,6 @@
 module.exports = {
   api: function (isStatic) {
-    const baseURL = "http://localhost:3000";
+    const baseURL = 'https://wabi-sabi.netlify.com';
     const browserBaseURL = !isStatic ? "" : process.env.BASE_URL;
 
     return {
