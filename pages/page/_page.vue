@@ -2,7 +2,9 @@
   <div>
     <img class="image" :src="page.image">
     <h1 class="title">{{page.title}}</h1>
-    <nuxtdown-body class="body" :body="page.body"/>
+    <main class="main page-wrapper">
+      <nuxtdown-body class="body" :body="page.body"/>
+    </main>
   </div>
 </template>
 
@@ -34,7 +36,11 @@ export default {
 }
 
 .title {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: center;
+}
+
+.body {
+  margin-bottom: 40px;
 }
 </style>
