@@ -1,17 +1,19 @@
 <template>
   <div>
     <Header/>
-    <section class="container">
-      <div v-for="post in posts" v-bind:key="post.slug">
+    <main class="main posts-container">
+      <div class="page-wrapper" v-for="post in posts" v-bind:key="post.slug">
         <PostTeaser
           class="post-teaser"
           v-bind:title="post.title"
           :date="post.date"
-          :body="post.body"
+          :category="post.category"
+          :description="post.description"
           :image="post.image"
+          :link="post.permalink"
         />
       </div>
-    </section>
+    </main>
   </div>
 </template>
 
@@ -30,6 +32,16 @@ export default {
 <style lang="less" scoped>
 .post-teaser {
   margin-bottom: 40px;
+}
+
+.main {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media only screen and (min-width: 1024px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 </style>
 
