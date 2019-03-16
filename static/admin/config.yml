@@ -17,8 +17,6 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-    meta:
-      - { label: 'SEO Description', name: 'seo', widget: 'text' }
   - label: "Post"
     name: "posts"
     folder: "content/posts"
@@ -38,8 +36,6 @@ collections:
       - { label: "Category", name: "category", widget: "relation", collection: "categories", searchFields: ["title"], valueField: "title", displayFields: ["title"], required: false}
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
-    meta:
-      - { label: 'SEO Description', name: 'seo', widget: 'text' }
   - label: 'Categories'
     name: 'categories'
     folder: "content/categories" 
