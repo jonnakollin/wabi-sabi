@@ -17,13 +17,13 @@ module.exports = {
         isPost: false
       }
     ],
-    [
-      'posts',
-      {
-        page: '/blog/_posts',
-        permalink: '/blog/:slug',
-        isPost: false
-      }
-    ],
+    /*  [
+       'posts',
+       {
+         page: '/blog/_posts',
+         permalink: '/blog/:slug',
+         isPost: false
+       }
+     ], */
   ]
 };

@@ -2,7 +2,7 @@
   <div>
     <Header/>
     <main class="main posts-container">
-      <div class="page-wrapper" v-for="post in posts" v-bind:key="post.slug">
+      <!--       <div class="page-wrapper" v-for="post in posts" v-bind:key="post.slug">
         <PostTeaser
           class="post-teaser"
           v-bind:title="post.title"
@@ -12,7 +12,7 @@
           :image="post.image"
           :link="post.permalink"
         />
-      </div>
+      </div>-->
     </main>
   </div>
 </template>
@@ -22,10 +22,10 @@ import PostTeaser from "~/components/PostTeaser";
 export default {
   components: {
     PostTeaser
-  },
-  asyncData: async ({ app, route, payload }) => ({
+  }
+  /*   asyncData: async ({ app, route, payload }) => ({
     posts: (await app.$content("/posts").get(route.path)) || payload
-  })
+  }) */
 };
 </script>
 

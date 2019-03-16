@@ -29,9 +29,9 @@ export default {
       ]
     };
   },
-  asyncData: async ({ app, route, payload }) => ({
+  /*   asyncData: async ({ app, route, payload }) => ({
     posts: (await app.$content("/posts").get(route.path)) || payload
-  }),
+  }), */
   methods: {
     formatDate: date => {
       return dateUtil.getMonthAsString(date);
