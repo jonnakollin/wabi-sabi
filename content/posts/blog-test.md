@@ -1,6 +1,7 @@
 ---
 date: March 01 2019
-title: test
+title: 'Wabi-Sabi: The art of imperfection'
+slug: testar
 image: >-
   https://raw.githubusercontent.com/jonnakollin/wabi-sabi/master/static/images/img_4132.jpg
 category: Web development
