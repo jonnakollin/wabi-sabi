@@ -8,7 +8,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "generate:manual": "cross-env BASE_URL=https://wabi-sabi.netlify.com nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",

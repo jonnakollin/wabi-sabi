@@ -2,6 +2,13 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
+  modules: [
+    'nuxtdown',
+    '@nuxtjs/style-resources',
+  ],
+  env: {
+    BASE_URL: process.env.BASE_URL || 'http://localhost:3000'
+  },
 
   /*
    ** Headers of the page
@@ -48,17 +55,6 @@ module.exports = {
    ** Plugins to load before mounting the App
    */
   plugins: [],
-
-  /*
-   ** Nuxt.js modules
-   */
-  modules: [
-    'nuxtdown',
-    '@nuxtjs/style-resources',
-  ],
-  env: {
-    BASE_URL: process.env.BASE_URL || 'http://localhost:3000'
-  },
 
   /*
    ** Build configuration
