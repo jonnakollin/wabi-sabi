@@ -56,10 +56,9 @@ module.exports = {
     'nuxtdown',
     '@nuxtjs/style-resources',
   ],
-
-  /*   env: {
-      baseUrl: process.env.BASE_URL || 'http://localhost:3000'
-    }, */
+  env: {
+    BASE_URL: process.env.BASE_URL || 'http://localhost:3000'
+  },
 
   /*
    ** Build configuration
