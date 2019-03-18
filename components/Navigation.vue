@@ -2,13 +2,13 @@
   <nav class="menu">
     <div class="primary-menu-desktop">
       <ul class="menu">
-        <NuxtLink
+        <nuxt-link
           v-for="link in links"
           v-if="!link.external"
           :key="link.id"
           :to="link.path"
           class="menu-item"
-        >{{link.name}}</NuxtLink>
+        >{{link.name}}</nuxt-link>
         <a
           v-for="link in links"
           v-if="link.external"

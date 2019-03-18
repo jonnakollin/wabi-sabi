@@ -9,14 +9,14 @@
           <img class="icon cross-icon" src="~/assets/icons/close.svg">
         </button>
         <div class="menu-container">
-          <NuxtLink
+          <nuxt-link
             v-for="link in links"
             v-if="!link.external"
             :key="link.id"
             :to="link.path"
             class="menu-item"
             @click.native="toggleMenu"
-          >{{link.name}}</NuxtLink>
+          >{{link.name}}</nuxt-link>
           <a
             v-for="link in links"
             v-if="link.external"

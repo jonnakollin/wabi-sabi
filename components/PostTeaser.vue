@@ -2,19 +2,19 @@
   <div class="post-teaser">
     <div class="content-container">
       <time class="meta">{{formatDate(date)}}</time>
-      <NuxtLink :to="link">
+      <nuxt-link :to="link">
         <h2 class="title">{{title}}</h2>
-      </NuxtLink>
+      </nuxt-link>
       <span class="meta">{{category}}</span>
       <div class="text">{{description}}</div>
-      <NuxtLink :to="link">
+      <nuxt-link :to="link">
         <button class="button--green">Read more</button>
-      </NuxtLink>
+      </nuxt-link>
     </div>
     <div class="image-container">
-      <NuxtLink :to="link">
+      <nuxt-link :to="link">
         <img :src="image">
-      </NuxtLink>
+      </nuxt-link>
     </div>
   </div>
 </template>

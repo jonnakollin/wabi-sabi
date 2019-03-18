@@ -1,15 +1,14 @@
 <template>
   <nav class="menu-desktop">
     <div class="menu">
-      <NuxtLink
-        active-class="hi"
+      <nuxt-link
         v-for="link in links"
         v-if="!link.external"
         :key="link.id"
         :to="link.path"
         class="menu-item"
         exact
-      >{{link.name}}</NuxtLink>
+      >{{link.name}}</nuxt-link>
       <a
         v-for="link in links"
         v-if="link.external"

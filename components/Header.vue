@@ -1,8 +1,8 @@
 <template>
   <header class="header">
-    <NuxtLink to="/">
+    <nuxt-link to="/">
       <h1 class="title">wabi-sabi</h1>
-    </NuxtLink>
+    </nuxt-link>
     <MenuMobile class="menu-mobile"/>
     <MenuDesktop class="menu-desktop"/>
   </header>

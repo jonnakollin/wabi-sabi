@@ -1,29 +1,21 @@
 module.exports = {
   api: function (isStatic) {
-    const baseUrl = 'https://wabi-sabi.netlify.com/' || 'http://localhost:3000';
-    const browserBaseUrl = !isStatic ? "" : process.env.BASE_URL;
-
+    const baseURL = "http://localhost:3000";
+    const browserBaseURL = !isStatic ? "" : process.env.BASE_URL;
     return {
-      baseUrl,
-      browserBaseUrl
+      baseURL,
+      browserBaseURL
     };
   },
   content: [
     [
-      'pages',
+      "pages",
       {
-        page: '/pages/_page',
-        permalink: '/:slug',
+        page: "/page/_page",
+        permalink: "/:slug",
         isPost: false
       }
-    ],
-    /*  [
-       'posts',
-       {
-         page: '/blog/_posts',
-         permalink: '/blog/:slug',
-         isPost: false
-       }
-     ], */
+    ]
   ]
+
 };
