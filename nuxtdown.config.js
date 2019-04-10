@@ -14,6 +14,11 @@ module.exports = {
         page: "/page/_page",
         permalink: "/:slug",
         isPost: false
+      },
+      "posts", {
+        page: "/blog/_posts",
+        permalink: "/:category/:slug",
+        isPost: false
       }
     ]
   ]
