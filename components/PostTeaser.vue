@@ -45,6 +45,10 @@ export default {
 
   @media only screen and (min-width: 1024px) {
     flex-direction: row;
+
+    /*     &:nth-child(odd) {
+      flex-direction: row-reverse;
+    } */
   }
 }
 

@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <nuxt-link to="/">
+    <nuxt-link :to="'/'">
       <h1 class="title">wabi-sabi</h1>
     </nuxt-link>
     <MenuMobile class="menu-mobile"/>
