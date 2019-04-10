@@ -1,7 +1,9 @@
 <template>
   <div>
     <Header/>
-    <nuxt/>
+    <div class="page-container">
+      <nuxt/>
+    </div>
     <Footer/>
   </div>
 </template>
@@ -19,4 +21,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.page-container {
+  min-height: 100vh;
+}
 </style>

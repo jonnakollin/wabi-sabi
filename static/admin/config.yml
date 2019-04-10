@@ -19,11 +19,25 @@ collections:
     name: "posts"
     folder: "content/posts"
     create: true
+    slug: "{{fields.slug}}"
+    fields:
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'date',
+          dateFormat: 'MMMM DD YYYY',
+          format: 'MMMM DD YYYY',
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false}
+      - { label: "Category", name: "category", widget: "relation", collection: "categories", searchFields: ["title"], valueField: "title", displayFields: ["title"], required: false}
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - label: 'Categories'
+    name: 'categories'
+    folder: "content/categories" 
+    create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Publish date", name: "date", widget: "datetime"}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Category", name: "category", widget: "string"}
-      - {label: "Content", name: "body", widget: "markdown"}
+      - {label: Title, name: title, widget: string} 
