@@ -1,7 +1,19 @@
 <template>
   <div>
     <Header/>
-    welcome
+    <main class="main page-wrapper">
+      <div v-for="post in posts" v-bind:key="post.slug">
+        <PostTeaser
+          class="post-teaser"
+          v-bind:title="post.title"
+          :date="post.date"
+          :category="post.category"
+          :description="post.description"
+          :image="post.image"
+          :link="post.permalink"
+        />
+      </div>
+    </main>
   </div>
 </template>
 
@@ -12,7 +24,7 @@ export default {
     PostTeaser
   },
   asyncData: async ({ app, route, payload }) => ({
-    // posts: (await app.$content("/posts").get(route.path)) || payload
+    posts: (await app.$content("/posts").getAll()) || payload
   })
 };
 </script>
